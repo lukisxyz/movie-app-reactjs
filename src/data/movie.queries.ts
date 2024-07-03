@@ -21,7 +21,7 @@ export function MovieListQuery(option: SearchMovieType) {
 		queryKey: ["movie", "list"],
 		async queryFn() {
 			const res: ListOfMovieType = await wretch(
-				`http://www.omdbapi.com/?s=${option.search}&apikey=${key}&y=${option.years}`,
+				`https://www.omdbapi.com/?s=${option.search}&apikey=${key}&y=${option.years}`,
 			)
 				.get()
 				.json();
